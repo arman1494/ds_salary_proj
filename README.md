@@ -33,3 +33,21 @@ In this project, the main focus is on the 'Salary Estimate' column, which contai
 After cleaning and preparing the data for analysis, the subsequent step involves selecting models to predict the estimated salary of a Data Scientist. In this section, the "salary_estimation" column is considered as the label data, while the other parameters are treated as predictors. In this tutorial, we will focus on two models: Linear Regression and RandomForestRegressor.
 
 It's important to note that these models are used for demonstrating the process of training supervised models. However, it's crucial to understand that finding suitable models requires time and identifying a good model can potentially take days or even months.
+
+## Deploying the Model
+
+After training the model, we utilized the Flask framework to deploy it base on REST full api. Now, users can locally input the desired job description and requirements to obtain an estimated hourly payment for a Data Scientist.
+
+```bash
+# Run the REST api locally
+python3 wsgi.py
+```
+
+```bash
+# Get the estimation
+python3 predict.py
+```
+
+After the run the above comment, the following response should be shown in command promp.
+
+![image](imgs/response.png)
