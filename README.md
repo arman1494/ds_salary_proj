@@ -5,6 +5,7 @@ An effective tool for estimating data scientist salaries
 
 - [Collect the data](#collect-the-data)
 - [Clean the data](#clean-the-data)
+- [Building Models](#building-models)
 
 ## Collect the data
 
@@ -26,3 +27,9 @@ In this project, the main focus is on the 'Salary Estimate' column, which contai
 3. the next step in the cleaning process is to remove the dollar sign ($) and the 'K' sign (representing thousands) from the numerical salary values. This is done to convert the salaries into a consistent numerical format. To remove the dollar sign, a simple string replacement can be performed on the 'Salary Estimate' column. For example, if the salary value is "$70,000 - $90,000", the dollar sign is removed to obtain "70,000 - 90,000".
 4.  To account for different salary types such as per hour or employer-provided, two additional columns will be added to the main DataFrame. These columns will indicate whether the salary is defined on an hourly basis or if no specific salary information is provided. For instance, a new column named "Hourly Salary" can be created, where a value of 1 indicates that the salary is defined per hour, and a value of 0 indicates that it is not an hourly-based salary.
 5. After doing the above steps, we will separate the min and mx salaries and also claculate the avg salaries.
+
+## Building Models
+
+After cleaning and preparing the data for analysis, the subsequent step involves selecting models to predict the estimated salary of a Data Scientist. In this section, the "salary_estimation" column is considered as the label data, while the other parameters are treated as predictors. In this tutorial, we will focus on two models: Linear Regression and RandomForestRegressor.
+
+It's important to note that these models are used for demonstrating the process of training supervised models. However, it's crucial to understand that finding suitable models requires time and identifying a good model can potentially take days or even months.
